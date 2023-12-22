@@ -1,5 +1,3 @@
-import imp
-import cv2
 import mediapipe.python.solutions.hands as mpHands
 import mediapipe.python.solutions.drawing_utils as drawing
 from .states import HandMouseMove, HandMouseClick
