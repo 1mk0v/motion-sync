@@ -1,16 +1,19 @@
 
 from .utils import getLengthOfPoints
+from abc import ABC, abstractclassmethod
 
-class State:
+
+class State(ABC):
 
     def __init__(self) -> None:
-        self.active = False
+        pass
 
-    def activate(self):
-        self.active = True
-
-    def deactivate(self):
-        self.active = False
+    @abstractclassmethod
+    def isActivate(self) -> bool:
+        '''
+        Условие активации
+        '''
+        pass
 
 
 class HandMouseMove(State):
