@@ -8,8 +8,8 @@
 
 1. **Клонирование репозитория:**
    ```bash
-   git clone https://github.com/1mk0v/MADI-AI.git 
-   cd MADI-AI
+   git clone git@github.com:1mk0v/motion-sync.git 
+   cd motion-sync
    ```
 
 
