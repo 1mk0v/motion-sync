@@ -1,4 +1,6 @@
 import cv2
+import pyautogui
+import mouse
 from Hands import HandTracker
 
 def main():
@@ -34,9 +36,11 @@ def main():
                 if handsTracker.handMouseMove.isActivate(LANDMARK1, LANDMARK2, LANDMARK3, LANDMARK4, LANDMARK5, width, height):
                     cv2.circle(frame, (int((LANDMARK2.x*width+LANDMARK3.x*width)/2), 
                                        int((LANDMARK2.y*height+LANDMARK3.y*height)/2)), 15, (255 ,102, 255), cv2.FILLED)
+                    pyautogui.moveTo()
                 if handsTracker.handMouseClick.isActivate(LANDMARK1, LANDMARK2, width, height):
                     cv2.circle(frame, (int((LANDMARK1.x*width+LANDMARK2.x*width)/2), 
                                        int((LANDMARK1.y*height+LANDMARK2.y*height)/2)), 10, (255 ,102, 255), cv2.FILLED)
+                    mouse.click('left')
 
         cv2.imshow("Hand Landmark", frame)
 
